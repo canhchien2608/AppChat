@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".activity.SearchAcitvity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <LinearLayout
+            android:padding="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_baseline_arrow_back_ios_24"
+                android:layout_width="20dp"
+                android:layout_height="20dp"/>
+            <TextView
+                android:id="@+id/search_txtBack"
+                android:textSize="18sp"
+                android:layout_gravity="center_vertical"
+                android:text="Trở về"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <TextView
+            android:text="Tìm kiếm"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/search_editText"
+            android:layout_width="match_parent"
+            android:autofillHints="true"
+            android:layout_height="wrap_content"
+            android:hint="Nhập tên người bạn trên Clover"
+            android:inputType="text"
+            android:layout_gravity="center"
+            android:paddingLeft="20dp"
+            android:background="@drawable/searchshape"
+            android:maxLines="1" />
+
+    </LinearLayout>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:textSize="15sp"
+        android:text="Gợi ý"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ListView
+            android:id="@+id/search_listView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:id="@+id/search_txtNone"
+            android:text="Không tìm thấy !"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

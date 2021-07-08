@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Xem ảnh"
+        android:id="@+id/profile_avatar_show"/>
+    <item android:title="Thay đổi ảnh"
+        android:id="@+id/profile_avatar_upload"/>
+    <item android:title="Xóa ảnh"
+        android:id="@+id/profile_avatar_delete"/>
+</menu>

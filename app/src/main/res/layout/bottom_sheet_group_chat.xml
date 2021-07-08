@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/background_listcomment"
+    android:layout_height="match_parent">
+    <View
+        android:id="@+id/view"
+        android:layout_width="70dp"
+        android:layout_height="3dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="#000" />
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/bottomSheetGroupChatAvatar"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="120dp"
+        android:layout_height="120dp"/>
+    <TextView
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:id="@+id/bottomSheetGroupChatName"
+        android:layout_below="@id/bottomSheetGroupChatAvatar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/bottomSheetGroupChatShowMember"
+        android:layout_marginLeft="15dp"
+        android:textSize="20sp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/bottomSheetGroupChatName"
+        android:text="Xem thành viên nhóm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/bottomSheetGroupChatAddMember"
+        android:layout_marginLeft="15dp"
+        android:textSize="20sp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/bottomSheetGroupChatShowMember"
+        android:text="Thêm thành viên"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/bottomSheetGroupChatDeleteAvatar"
+        android:layout_marginLeft="15dp"
+        android:textSize="20sp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/bottomSheetGroupChatAddMember"
+        android:text="Gỡ ảnh đại diện"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/bottomSheetGroupChatChangeAvatar"
+        android:layout_marginLeft="15dp"
+        android:textSize="20sp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/bottomSheetGroupChatDeleteAvatar"
+        android:text="Thay đổi ảnh đại diện"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/bottomSheetGroupChatChangeName"
+        android:layout_marginLeft="15dp"
+        android:textSize="20sp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/bottomSheetGroupChatChangeAvatar"
+        android:text="Chỉnh sửa tên nhóm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_marginBottom="20dp"
+        android:id="@+id/bottomSheetGroupChatLeave"
+        android:layout_marginLeft="15dp"
+        android:textSize="20sp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/bottomSheetGroupChatChangeName"
+        android:text="Rời khỏi nhóm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <View
+        android:layout_width="70dp"
+        android:layout_height="3dp"
+        android:layout_gravity="center_horizontal"
+        android:background="#000"
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_marginTop="20dp"
+        android:visibility="gone"
+        android:text="Xóa cuộc trò chuyện"
+        android:id="@+id/btnBSDeleteMess"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnBSBlock"
+        android:text="Chặn"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

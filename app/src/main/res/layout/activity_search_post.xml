@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/friend_view1"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:padding="10dp">
+        <ImageView
+            android:id="@+id/searchPostBtnBack"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_baseline_arrow_back_ios_24"
+            android:layout_width="20dp"
+            android:layout_height="20dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Tìm kiếm bài viết"
+            android:textColor="#000"
+            android:textSize="20dp" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_below="@id/friend_view1"
+        android:id="@+id/viewview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:paddingRight="24dp"
+            android:id="@+id/searchPostEdtContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:hint="Nhập các từ khóa có liên quan"
+            android:paddingLeft="10dp" />
+        <ImageView
+            android:id="@+id/searchPostBtnSearch"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_baseline_search_24"
+            android:layout_width="25dp"
+            android:layout_height="25dp"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_below="@id/viewview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/searchPostListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+</RelativeLayout>

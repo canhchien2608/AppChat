@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:theme="@style/Theme.Design.Light"
+    android:layout_height="match_parent"
+    tools:ignore="ScrollViewCount">
+
+    <androidx.appcompat.widget.Toolbar
+        android:background="#4CAF50"
+        android:id="@+id/userProfileToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ScrollView
+        android:layout_below="@+id/userProfileToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/userProfileImgCover"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:scaleType="centerCrop"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/userProfileImgAvatar"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_below="@+id/userProfileImgCover"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="-80dp"
+                    app:civ_border_color="#FF000000"
+                    app:civ_border_width="2dp" />
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/userProfileName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:text=""
+                        android:textAlignment="center"
+                        android:textColor="#0D8595"
+                        android:textSize="17sp"
+                        android:textStyle="italic" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:weightSum="20">
+
+                    <TextView
+                        android:id="@+id/userProfileStory"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="19"
+                        android:text=""
+                        android:textAlignment="center"
+                        android:textColor="#000"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="10">
+                    <LinearLayout
+                        android:gravity="center"
+                        android:visibility="gone"
+                        android:orientation="horizontal"
+                        android:id="@+id/container_friend"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/userProfileBtnChat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:drawableStart="@drawable/ic_baseline_message_24"
+                            android:text="Nhắn tin"
+                            android:textAllCaps="false" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/userProfileBtnUnFriend"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:drawableStart="@drawable/cancelfriend"
+                            android:text="Hủy kết bạn"
+                            android:textAllCaps="false" />
+                    </LinearLayout>
+                    <RelativeLayout
+                        android:gravity="center"
+                        android:visibility="gone"
+                        android:layout_centerHorizontal="true"
+                        android:orientation="horizontal"
+                        android:id="@+id/container_notFriend"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:layout_centerHorizontal="true"
+                            android:id="@+id/userProfileBtnAddFriend"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@drawable/addfriend"
+                            android:text="Thêm bạn bè"
+                            android:textAllCaps="false" />
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:visibility="gone"
+                            android:layout_centerHorizontal="true"
+                            android:id="@+id/userProfileBtnCancelAddFriend"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@drawable/cancelfriend"
+                            android:text="Hủy lời mời"
+                            android:textAllCaps="false" />
+
+                    </RelativeLayout>
+                    <LinearLayout
+                        android:gravity="center"
+                        android:visibility="gone"
+                        android:orientation="horizontal"
+                        android:id="@+id/container_pending"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:paddingLeft="10dp"
+                            android:background="@drawable/background_right"
+                            android:id="@+id/userProfileBtnAccept"
+                            android:layout_width="110dp"
+                            android:layout_height="40dp"
+                            android:drawablePadding="-10dp"
+                            android:drawableStart="@drawable/accept"
+                            android:text="Chấp nhận"
+                            android:textColor="#FFFFFF"
+                            android:textAllCaps="false" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:paddingLeft="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:id="@+id/userProfileBtnCancelPending"
+                            android:layout_width="110dp"
+                            android:layout_height="40dp"
+                            android:drawableStart="@drawable/cancel"
+                            android:text="Từ chối"
+                            android:drawablePadding="-10dp"
+                            android:background="@drawable/list_request_background_button"
+                            android:textAllCaps="false" />
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view1">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/userProfilePost"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </RelativeLayout>
+    </ScrollView>
+    <include
+        android:id="@+id/userProfileOverlay"
+        layout="@layout/layout_overlay"
+        android:visibility="visible" />
+</RelativeLayout>

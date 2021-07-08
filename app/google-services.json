@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "472220299763",
+    "firebase_url": "https://appchat-a6212.firebaseio.com",
+    "project_id": "appchat-a6212",
+    "storage_bucket": "appchat-a6212.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:472220299763:android:27ab8a87b34e587b6d6286",
+        "android_client_info": {
+          "package_name": "chien.nc.com.appchat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "472220299763-cehb1lddhv6p0anj3sf11t6vektpn28e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIhYFhH96lTTgmHAOHisp5cABu3UK5v1w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "472220299763-cehb1lddhv6p0anj3sf11t6vektpn28e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

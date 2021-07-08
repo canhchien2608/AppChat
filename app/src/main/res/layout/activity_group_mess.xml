@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.GroupMessActivity">
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:padding="10dp">
+
+        <ImageView
+            android:src="@drawable/ic_baseline_keyboard_backspace_24"
+            android:layout_marginRight="10dp"
+            android:id="@+id/groupMessBtnBack"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+             />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_toEndOf="@id/groupMessBtnBack"
+            android:id="@+id/groupMessAvatar"
+            android:layout_centerVertical="true"
+            android:layout_width="30dp"
+            android:layout_height="30dp"/>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/groupMessAvatar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:id="@+id/groupMessName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/groupMessBtnMore"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/ic_baseline_info_24" />
+        </LinearLayout>
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:background="#FFFFFF"
+        android:id="@+id/groupMessRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_below="@id/top"
+        android:layout_above="@id/bottom"
+        android:layout_height="match_parent"/>
+    <RelativeLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/groupMessAddImg"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/ic_baseline_image_24" />
+
+        <EditText
+            android:id="@+id/groupMessContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_toLeftOf="@id/groupMessBtnSend"
+            android:layout_toRightOf="@id/groupMessAddImg"
+            android:background="@drawable/searchshape"
+            android:hint="Soạn tin nhắn..."
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"/>
+
+        <ImageView
+            android:layout_marginLeft="10dp"
+            android:id="@+id/groupMessBtnSend"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_baseline_send_24" />
+    </RelativeLayout>
+
+</RelativeLayout>

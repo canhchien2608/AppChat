@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/itemSearchUser"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:padding="10dp"
+    android:layout_height="110dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/listSearch_image"
+        android:layout_width="50dp"
+        android:layout_centerVertical="true"
+        android:layout_height="50dp"/>
+    <TextView
+        android:id="@+id/listSearch_username"
+        android:layout_marginLeft="10dp"
+        android:textSize="17sp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/listSearch_image"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:layout_centerVertical="true"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:gravity="right"
+        android:layout_height="wrap_content">
+
+    </LinearLayout>
+    <include
+        android:id="@+id/search_il_overlay"
+        layout="@layout/layout_overlay"
+        android:visibility="visible" />
+
+</RelativeLayout>

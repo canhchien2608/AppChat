@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/itemShow_menu_list_friend"
+        android:title="Xem thông tin"/>
+    <item
+        android:id="@+id/itemDelete_menu_list_friend"
+        android:title="Xóa"/>
+
+</menu>

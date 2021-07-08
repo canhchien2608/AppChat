@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.MessengerActivity">
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:padding="10dp">
+
+        <ImageView
+            android:layout_marginRight="10dp"
+            android:id="@+id/messenger_imgBack"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_baseline_keyboard_backspace_24" />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_toEndOf="@id/messenger_imgBack"
+            android:id="@+id/messenger_imgAvatar"
+            android:layout_centerVertical="true"
+            android:layout_width="30dp"
+            android:layout_height="30dp"/>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/messenger_imgAvatar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:id="@+id/messenger_txtName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:textSize="16sp" />
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:id="@+id/messenger_txtStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:textSize="12sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/messenger_imgMore"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/ic_baseline_more_vert_24" />
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_below="@id/top"
+        android:layout_above="@id/messenger_bottom"
+        android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView
+            android:background="#FFFFFF"
+            android:id="@+id/messenger_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/messenger_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/messenger_imgImage"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/ic_baseline_image_24" />
+
+        <EditText
+            android:id="@+id/messenger_edtContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_toLeftOf="@id/messenger_imgSend"
+            android:layout_toRightOf="@id/messenger_imgImage"
+            android:background="@drawable/searchshape"
+            android:hint="Soạn tin nhắn..."
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"/>
+
+            <ImageView
+                android:layout_marginLeft="10dp"
+                android:id="@+id/messenger_imgSend"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_baseline_send_24" />
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/messenger_txtNotify"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:text="Bạn không thể gửi tin nhắn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+</RelativeLayout>
